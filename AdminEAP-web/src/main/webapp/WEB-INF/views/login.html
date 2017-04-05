@@ -38,13 +38,15 @@
     <div class="login-box-body">
         <p class="login-box-msg">测试账号 test/bill</p>
 
-        <form action="${basePath}/login" method="post" id="login-form">
+        <form action="${basePath}/login" method="post" id="login-form" autocomplete="off">
             <div class="form-group has-feedback">
-                <input type="text" class="form-control"  name="userName" placeholder="请输入登录邮箱/登录名">
+                <input style="display:none"/>
+                <input type="text" class="form-control"  name="userName" placeholder="请输入登录邮箱/登录名" >
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control" name="password" placeholder="请输入密码">
+                <input type="password" name="password1" style="display:none"/>
+                <input type="password" class="form-control" name="password" placeholder="请输入密码" >
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
