@@ -13,7 +13,7 @@
     <url>http://www.admineap.com</url>
     <description>Enterprise Application Platform by AdminLTE</description>
     <!--使用私服nexus作为jar包仓库，配置只下载发布版本，不下载快照版本 -->
-    <repositories>
+<!--    <repositories>
         <repository>
             <id>nexus</id>
             <name>Nexus</name>
@@ -25,10 +25,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <!--使用私服nexus作为maven插件仓库 -->
-    <pluginRepositories>
+<!--    <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
             <name>Nexus</name>
@@ -40,9 +40,9 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>-->
     <!--使用nexus私服，上传私有插件的发布版本和快照版本 -->
-    <distributionManagement>
+<!--    <distributionManagement>
         <repository>
             <id>nexus-releases</id>
             <name>Nexus Releases Repository</name>
@@ -53,7 +53,23 @@
             <name>Nexus Snapshots Repository</name>
             <url>http://10.122.127.16:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement>-->
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>local private nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>local private nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <properties>
         <spring-version>4.0.8.RELEASE</spring-version>
         <hibernate-version>4.3.6.Final</hibernate-version>
